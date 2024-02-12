@@ -4,12 +4,12 @@ import Navbar from '@/Components/Navbar';
 import NewsList from '@/Components/Homepage/NewsList';
 
 export default function Homepage(props) {
-    console.log('data = ', props.news)
+    console.log('props: ', props)
     return (
         <div className='min-h-screen bg-slate-500 text-white text-2xl'>
             <Head title={props.title} />   
             <Navbar />         
-            <NewsList news={props.news} />
+            <NewsList news={props.news.data} />
         </div>
     )
 }

@@ -16,7 +16,6 @@ class NewsController extends Controller
     {
         //
         $news = new NewsCollection(News::paginate(20));
-        dd($news);
         return Inertia::render('Homepage', [
             'title' => 'CUY NEWS HOME',
             'description' => 'Selamat Datang di Cuy News Portal',
