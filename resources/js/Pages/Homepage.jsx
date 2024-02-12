@@ -9,7 +9,9 @@ export default function Homepage(props) {
         <div className='min-h-screen bg-slate-500 text-white text-2xl'>
             <Head title={props.title} />   
             <Navbar />         
-            <NewsList news={props.news.data} />
+            <div className='flex justify-center items-center flex-col lg:flex-row lg:flex-wrap lg:items-stretch gap-4 p-4'>
+                <NewsList news={props.news.data} />
+            </div>
         </div>
     )
 }
