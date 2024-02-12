@@ -15,6 +15,7 @@ class NewsController extends Controller
     {
         //
         $news = News::all();
+        
         return Inertia::render('Homepage', [
             'title' => 'CUY NEWS HOME',
             'description' => 'Selamat Datang di Cuy News Portal',
