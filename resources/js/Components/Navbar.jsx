@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from '@inertiajs/react'
 
 const Navbar = ({ user }) => {
     console.log('isUser?', user)
@@ -20,19 +21,19 @@ const Navbar = ({ user }) => {
                     <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
                         {!user ?
                         <>
-                            <li className='text-black'><a>Login</a></li>
-                            <li className='text-black'><a>Register</a></li>
+                            <li className='text-black'><Link href={route('login')} as="button">Login</Link></li>
+                            <li className='text-black'><Link href={route('register')} as="button">Register</Link></li>
                         </>
                         : 
                         <>
                             <li>
-                                <a className="justify-between">
+                                <Link href={route('dashboard')} as="button" className="justify-between">
                                     Dashboard
                                     <span className="badge">New</span>
-                                </a>
+                                </Link>
                             </li>
-                            <li><a>Settings</a></li>
-                            <li><a>Logout</a></li>
+                            <li><Link>Settings</Link></li>
+                            <li><Link>Logout</Link></li>
                         </>
                         }
                     </ul>
