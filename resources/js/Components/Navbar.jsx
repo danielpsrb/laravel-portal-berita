@@ -15,7 +15,7 @@ const Navbar = ({ user }) => {
                 <div className="dropdown dropdown-end">
                     <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                         <div className="w-10 rounded-full">
-                            <img alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                            <img alt="Tailwind CSS Navbar component" src="https://cdn-icons-png.flaticon.com/128/1144/1144811.png" />
                         </div>
                     </div>
                     <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
@@ -26,14 +26,14 @@ const Navbar = ({ user }) => {
                         </>
                         : 
                         <>
-                            <li>
+                            <li className='text-black'>
                                 <Link href={route('dashboard')} as="button" className="justify-between">
                                     Dashboard
                                     <span className="badge">New</span>
                                 </Link>
                             </li>
-                            <li><Link>Settings</Link></li>
-                            <li><Link>Logout</Link></li>
+                            <li className='text-black'><Link>Settings</Link></li>
+                            <li className='text-black'><Link>Logout</Link></li>
                         </>
                         }
                     </ul>
