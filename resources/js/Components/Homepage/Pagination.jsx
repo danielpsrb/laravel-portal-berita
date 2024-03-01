@@ -10,7 +10,7 @@ const Pagination = ({ meta }) => {
     return (
         <div>
             <div className="join">
-                <Link href={prev} className="btn btn-outline">«</Link>
+                {prev && <Link href={prev} className="btn btn-outline">«</Link>}
                 <button className="btn btn-outline">{curent}</button>
                 {next && <Link href={next} className="btn btn-outline">»</Link>}
             </div>
