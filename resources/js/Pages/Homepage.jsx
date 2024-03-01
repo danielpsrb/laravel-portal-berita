@@ -2,6 +2,7 @@ import React from 'react'
 import { Link, Head } from '@inertiajs/react';
 import Navbar from '@/Components/Navbar';
 import NewsList from '@/Components/Homepage/NewsList';
+import Pagination from '@/Components/Homepage/Pagination';
 
 export default function Homepage(props) {
     console.log('props: ', props)
@@ -11,6 +12,9 @@ export default function Homepage(props) {
             <Navbar />         
             <div className='flex justify-center items-center flex-col lg:flex-row lg:flex-wrap lg:items-stretch gap-4 p-4'>
                 <NewsList news={props.news.data} />
+            </div>
+            <div>
+                <Pagination />
             </div>
         </div>
     )
