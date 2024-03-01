@@ -33,7 +33,7 @@ const Navbar = ({ user }) => {
                                 </Link>
                             </li>
                             <li className='text-black'><Link>Settings</Link></li>
-                            <li className='text-black'><Link>Logout</Link></li>
+                            <li className='text-black'><Link href={route('logout')} method='POST' as="button">Logout</Link></li>
                         </>
                         }
                     </ul>
