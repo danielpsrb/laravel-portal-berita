@@ -5,7 +5,7 @@ import NewsList from '@/Components/Homepage/NewsList';
 import Pagination from '@/Components/Homepage/Pagination';
 
 export default function Homepage(props) {
-    console.log('props: ', props)
+    // console.log('props: ', props)
     return (
         <div className='min-h-screen bg-slate-500 text-white text-2xl'>
             <Head title={props.title} />   
@@ -14,7 +14,7 @@ export default function Homepage(props) {
                 <NewsList news={props.news.data} />
             </div>
             <div className='flex items-center justify-center'>
-                <Pagination />
+                <Pagination meta={props.news.meta} />
             </div>
         </div>
     )
