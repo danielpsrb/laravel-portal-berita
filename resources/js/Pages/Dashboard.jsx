@@ -11,7 +11,7 @@ export default function Dashboard({ auth }) {
 
     const handleSubmit = () => {
         const NewsData = { title, description, category };
-        Inertia.post('/posts', NewsData);
+        Inertia.post('/news', NewsData);
     }
 
     console.log('auth last: ', auth)
