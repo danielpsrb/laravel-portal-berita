@@ -42,7 +42,7 @@ class NewsController extends Controller
         $news->category = $request->category;
         $news->author = auth()->user()->email;
         $news->save();
-        return redirect()->back()->with('success', 'News Created Successfully');
+        return redirect()->back()->with('message', 'News Created Successfully');
     }
 
     /**
