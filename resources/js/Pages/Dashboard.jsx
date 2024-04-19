@@ -1,7 +1,17 @@
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
 import { Head } from '@inertiajs/react';
+import { useState } from 'react';
 
 export default function Dashboard({ auth }) {
+
+    const [title, setTitle] = useState('');
+    const [description, setDescription] = useState('');
+    const [category, setCategory] = useState('');
+
+    const handleSubmit = () => {
+        const data = { title, description, category };
+    }
+
     return (
         <AuthenticatedLayout
             user={auth.user}
@@ -12,10 +22,10 @@ export default function Dashboard({ auth }) {
             <div className="py-12">
                 <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
                     <div className="p-6 text-gray-900">
-                        <input type="text" placeholder="Title" className="m-2 input input-bordered input-primary w-full" />
-                        <input type="text" placeholder="Description" className="m-2 input input-bordered input-primary w-full" />
-                        <input type="text" placeholder="Category" className="m-2 input input-bordered input-primary w-full" />
-                        <button className="btn btn-primary m-2">Submit</button>
+                        <input type="text" placeholder="Title" className="m-2 input input-bordered input-primary w-full" onChange={(title) => setTitle(title.target.value)} />
+                        <input type="text" placeholder="Description" className="m-2 input input-bordered input-primary w-full" onChange={(description) => setDescription(description.target.value)}  />
+                        <input type="text" placeholder="Category" className="m-2 input input-bordered input-primary w-full" onChange={(category) => setCategory(category.target.value)}  />
+                        <button className="btn btn-primary m-2" onClick={() => handleSubmit()}>Submit</button>
                     </div>
                 </div>
             </div>
