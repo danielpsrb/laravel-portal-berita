@@ -3,7 +3,7 @@ import { Head } from '@inertiajs/react';
 import { useState } from 'react';
 import { Inertia } from '@inertiajs/inertia';
 
-export default function Dashboard({ auth }) {
+export default function Dashboard(props) {
 
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
@@ -14,11 +14,11 @@ export default function Dashboard({ auth }) {
         Inertia.post('/news', NewsData);
     }
 
-    console.log('auth last: ', auth)
+    console.log('auth last: ', props)
 
     return (
         <AuthenticatedLayout
-            user={auth.user}
+            user={props.auth}
             header={<h2 className="font-semibold text-xl text-gray-800 leading-tight">Dashboard</h2>}
         >
             <Head title="Dashboard" />
