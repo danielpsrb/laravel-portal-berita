@@ -18,7 +18,7 @@ use Inertia\Inertia;
 */
 
 Route::get('/', [NewsController::class, 'index']);
-Route::post('/news', 'NewsController@store');
+Route::post('/news', [NewsController::class, 'store']);
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
